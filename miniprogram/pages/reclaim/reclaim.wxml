@@ -1,0 +1,17 @@
+<view class="containe" >
+<view class="top">
+    <image src="{{img}}"></image>
+</view>
+<view class="text1">
+   <text class="head">{{text1}}：</text>
+   <text>{{text1body}}</text>
+</view>
+<view class="text1">
+   <text class="head">{{text1}}主要包括：</text>
+   <text>{{text2body}}</text>
+</view>
+<!-- <view class="text1">
+   <text class="head">{{text3}}</text>
+   <text>{{text3body}}</text>
+</view> -->
+</view>

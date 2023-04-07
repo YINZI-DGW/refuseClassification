@@ -1,0 +1,46 @@
+view.weui-mask {
+  background-color: rgba(66, 66, 66, 0.4);
+}
+
+.title {
+  font-size: 40rpx;
+  line-height: 90rpx;
+  margin-top: 20rpx;
+}
+
+.img {
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.text {
+  /* margin-top: 40rpx; */
+  text-align: left;
+  font-size: 30rpx;
+}
+
+.header {
+  color: var(--indexL);
+}
+
+.qd {
+  color: var(--indexL);
+  font-weight: normal;
+}
+
+view.weui-dialog__ft {
+  line-height: 50px;
+  min-height: 50px;
+}
+
+view.weui-dialog {
+  min-height: 700rpx;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.body {
+  flex: 1;
+}

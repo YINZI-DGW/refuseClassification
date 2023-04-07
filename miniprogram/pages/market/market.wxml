@@ -1,0 +1,87 @@
+<van-tabs swipeable>
+  <van-tab title="<100分">
+    <view class="fengexian">
+    </view>
+    <view class="body">
+      <block wx:for="{{goodlists}}" wx:for-item="goods">
+        <view class="body-item"  data-imgsrc="{{goods.imgsrc}}"  data-price="{{goods.price}}" bindtap="gomarketdet">
+          <view class="left">
+            <image src="{{goods.imgsrc}}"  class="image" />
+          </view>
+          <view class="right">
+            <text class="text1">{{goods.name}}</text>
+            <text class="text2">{{goods.dec}}</text>
+            <div class="text3">
+              <text>¥{{goods.price}}</text>
+              <text style="margin-left:20rpx;margin-top:6rpx;font-size: 24rpx;color: rgb(139, 139, 139);">销量：{{goods.num}}</text>
+            </div>
+            <text class="text4">{{goods.store}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </van-tab>
+  <van-tab title="<300分">
+    <view class="fengexian"></view>
+    <view class="body">
+      <block wx:for="{{goodlists1}}" wx:for-item="goods">
+        <view class="body-item"  data-imgsrc="{{goods.imgsrc}}"  data-price="{{goods.price}}"  bindtap="gomarketdet">
+          <view class="left">
+            <image src="{{goods.imgsrc}}"  class="image" />
+          </view>
+          <view class="right">
+            <text class="text1">{{goods.name}}</text>
+            <text class="text2">{{goods.dec}}</text>
+            <div class="text3">
+              <text>¥{{goods.price}}</text>
+              <text style="margin-left:20rpx;margin-top:6rpx;font-size: 24rpx;color: rgb(139, 139, 139);">销量：{{goods.num}}</text>
+            </div>
+            <text class="text4">{{goods.store}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </van-tab>
+  <van-tab title="<600分">
+    <view class="fengexian"></view>
+    <view class="body">
+      <block wx:for="{{goodlists2}}" wx:for-item="goods">
+        <view class="body-item"  data-imgsrc="{{goods.imgsrc}}"  data-price="{{goods.price}}"  bindtap="gomarketdet">
+          <view class="left">
+            <image src="{{goods.imgsrc}}"  class="image" />
+          </view>
+          <view class="right">
+            <text class="text1">{{goods.name}}</text>
+            <text class="text2">{{goods.dec}}</text>
+            <div class="text3">
+              <text>¥{{goods.price}}</text>
+              <text style="margin-left:20rpx;margin-top:6rpx;font-size: 24rpx;color: rgb(139, 139, 139);">销量：{{goods.num}}</text>
+            </div>
+            <text class="text4">{{goods.store}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </van-tab>
+  <van-tab title="1000分">
+    <view class="fengexian"></view>
+    <view class="body">
+      <block wx:for="{{goodlists3}}" wx:for-item="goods">
+        <view class="body-item"  data-imgsrc="{{goods.imgsrc}}"  data-price="{{goods.price}}"  bindtap="gomarketdet">
+          <view class="left">
+            <image src="{{goods.imgsrc}}"  class="image" />
+          </view>
+          <view class="right">
+            <text class="text1">{{goods.name}}</text>
+            <text class="text2">{{goods.dec}}</text>
+            <div class="text3">
+              <text>¥{{goods.price}}</text>
+              <text style="margin-left:20rpx;margin-top:6rpx;font-size: 24rpx;color: rgb(139, 139, 139);">销量：{{goods.num}}</text>
+            </div>
+            <text class="text4">{{goods.store}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </van-tab>
+</van-tabs>

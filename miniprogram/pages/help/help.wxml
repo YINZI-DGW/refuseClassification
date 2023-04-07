@@ -1,0 +1,89 @@
+<!-- 头部选择小区 -->
+<van-toast id="van-toast" :zIndex='1'/>
+<van-cell title="选择小区" is-link bind:click="showPopup" value="{{xiaoqu}}" />
+<van-popup show="{{ showpop }}" position="bottom" custom-style="height: 46vh;" bind:close="onClose">
+  <van-picker show-toolbar title="选择小区" columns="{{ columns }}" default-index="{{ 0 }}" bind:cancel="onCancel" bind:confirm="onConfirm" />
+</van-popup>
+<!-- 中间内容 -->
+<van-loading wx:if="{{!loading}}" size="24px" type="spinner" color="#1989fa" class="loading">加载中...</van-loading>
+<view class="body">
+  <block wx:for="{{helpList}}" wx:for-item="item">
+    <view class="bodyitem" wx:if="{{loading}}">
+      <van-cell-group inset>
+        <van-cell center>
+          <view slot="title">
+            <view class="top">
+              <view class="touxiang">
+                <image src="{{item.avatarUrl}}"></image>
+              </view>
+              <view class="top-right">
+                <view style="font-size: 24rpx;">{{item.nickName}}</view>
+                <view style="width: 60vw;">
+                  <text style="color: rgb(2, 187, 101);font-size: 24rpx;">跑腿费：{{item.pirce}}¥</text>
+                  <text style="color: rgb(2, 187, 101);font-size: 24rpx;float:right;">发布时间：{{item.date}}</text>
+                </view>
+              </view>
+            </view>
+            <view>分类情况：{{item.state}}</view>
+            <view style="width: 100%;">
+              垃圾数量：{{item.num}}
+            </view>
+            <view>
+              评分：
+              <van-rate readonly value="{{ item.rate }}" allow-half void-icon="star" void-color="#eee" />
+            </view>
+            <view style="width: 100%;display: flex;">
+              <text >详细位置：<text style="font-size: 25rpx;">{{item.address}}</text></text>
+              <view style="margin-left: auto;">
+                <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" size="small">
+                  帮忙
+                </van-button>
+              </view>
+            </view>
+          </view>
+        </van-cell>
+      </van-cell-group>
+    </view>
+  </block>
+  <view class="add" bindtap="add">
+    <van-icon name="shopping-cart-o" style="font-size: 40rpx;" />
+  </view>
+  <!-- 弹出框选择 -->
+  <van-overlay show="{{ show }}" bind:click="onClickHide">
+    <view class="wrapper">
+      <view class="block">
+        <van-cell-group inset>
+          <van-field value="{{ detail.phone }}" clearable label="联系方式" icon="question-o" placeholder="请输入您的联系方式" />
+          <van-cell title="垃圾数量">
+            <van-stepper value="{{ detail.num }}" integer />
+          </van-cell>
+
+          <van-cell title="跑腿费">
+            <van-stepper value="{{ detail.price }}" step="0.2" decimal-length="{{ 1 }}" />
+          </van-cell>
+          <van-cell title="是否分类">
+            <van-switch checked="{{ detail.state }}" bind:change="changestate" size="24px" />
+          </van-cell>
+          <van-cell >
+            <view slot="title">
+               <text >选择小区</text>
+            </view>
+            <view slot="">
+              <text>{{ detail.xiaoqu }}</text>
+              <van-icon name="location-o" style="margin-left: 20rpx;font-size: 40rpx;" bind:click="gomap"/>
+              <!-- <van-dropdown-menu overlay='{{overflay}}'>
+                <van-dropdown-item   popup-style="width:76vw;margin-left:12vw" value="{{ value1 }}" options="{{ option1 }}"  />
+              </van-dropdown-menu> -->
+            </view>
+          </van-cell>
+           <van-field value="{{ detail.address }}" label="详细位置" placeholder="请输入所在位置" border="{{ true }}" />
+        </van-cell-group>
+        <view class="bottom" style="width: 100%; display: flex; align-items: center;justify-content: center;margin-top: 60rpx;">
+          <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" bindtap="submit">
+            提交订单
+          </van-button>
+        </view>
+      </view>
+    </view>
+  </van-overlay>
+</view>

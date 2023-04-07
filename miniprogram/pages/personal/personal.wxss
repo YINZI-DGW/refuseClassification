@@ -1,0 +1,201 @@
+page {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 420rpx;
+    /* background-image: url(''); */
+    background-color: rgba(29, 201, 201, 0.966);
+}
+
+.bgcimg {
+    width: 100%;
+    height: 100rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    mix-blend-mode: screen;
+}
+
+.header_card {
+    border-radius: 20rpx;
+    margin: 50rpx auto;
+    width: 80vw;
+    height: 300rpx;
+    background-color: #fff;
+    /* padding: 40rpx 40rpx; */
+}
+
+/* 个人中心头部样式 */
+.header_card_top {
+    margin: 40rpx 40rpx 0 40rpx;
+    height: 180rpx;
+    /* background-color: rgb(119, 42, 42); */
+    display: flex;
+}
+
+.header_card_left {
+    height: 120rpx;
+    width: 120rpx;
+    margin: auto 60rpx;
+    border-radius: 20%;
+    box-shadow: 5rpx slategray;
+    /* background-color: rgb(31, 27, 27); */
+}
+
+.header_card_left image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+}
+
+.header_card_right {
+    flex: 1;
+}
+
+.header_card_right text {
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+    padding-left: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    display: block;
+    font-weight: 600;
+    /* background-color: #fff; */
+}
+
+.loginbutton {
+    background-color: rgba(29, 201, 201, 0.966);
+    border: 2rpx solid rgba(58, 68, 68, 0.966);
+    border-radius: 20rpx;
+    width: 200rpx;
+    height: 50rpx;
+    font-size: 40rpx;
+    line-height: 50rpx;
+    text-align: center;
+}
+
+.header_card_bottom {
+    /* background-color: rgb(105, 64, 64); */
+    display: flex;
+    height: 110rpx;
+    padding: 0 40rpx;
+    font-size: 30rpx;
+}
+
+.header_card_bottom image {
+    width: 64rpx;
+    height: 64rpx;
+    display: inline-block;
+    margin: 22rpx 20rpx;
+}
+
+.header_card_bottom text {
+    padding-left: 30rpx;
+    margin: 0;
+    display: inline-block;
+    height: 110rpx;
+    line-height: 110rpx;
+}
+
+.header_card_bottom_left {
+    flex: 1;
+    display: flex;
+    /* background-color: springgreen; */
+}
+
+.header_card_bottom_right {
+    flex: 1;
+    display: flex;
+    /* flex-direction: column; */
+    /* background-color: tomato; */
+}
+
+/* 个人中心中部样式 */
+.body {
+    margin-top: 10rpx;
+    height: 200rpx;
+    /* background-color: tomato; */
+    display: flex;
+    width: 100%;
+}
+
+.body_item {
+    margin: auto;
+    border: 10rpx solid rgb(236, 236, 236);
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 20rpx;
+    /* background-color: violet; */
+    /* box-shadow: 5rpx 5rpx 2rpx #cecbcb; */
+}
+
+.body_item image {
+    display: block;
+    width: 64rpx;
+    height: 64rpx;
+    /* background-color: rgb(133, 79, 79); */
+    margin: 30rpx auto 10rpx;
+}
+
+.body_item text {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* 
+ 底部样式
+ */
+.bottom {
+    width: 90%;
+    margin-top: 40rpx;
+    height: 440rpx;
+    border-radius: 20rpx;
+    /* background-color: rgb(99, 67, 67); */
+}
+
+.bottom_item {
+    overflow: hidden;
+    /* display: flex; */
+    width: 100%;
+    height: 110rpx;
+    /* background-color: rgb(0, 0, 0); */
+}
+
+.bottom_item_1 {
+    display: block;
+    float: left;
+    width: 64rpx;
+    height: 64rpx;
+    /* background-color: #fff; */
+    margin: auto 20rpx auto 20rpx;
+    margin-top: 23rpx;
+}
+
+.bottom_item_2 {
+    float: inline-end;
+    /* display: block; */
+    width: 64rpx;
+    height: 64rpx;
+    /* background-color: rgb(41, 24, 102); */
+    margin: auto 20rpx auto 20rpx;
+    margin-top: 23rpx;
+}
+
+.bottom_item text {
+    display: block;
+    height: 100%;
+    line-height: 110rpx;
+    float: left;
+    /* background-color: rgb(150, 96, 96); */
+}

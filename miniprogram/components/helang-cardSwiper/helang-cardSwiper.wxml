@@ -1,0 +1,18 @@
+<view class="helang-cardSwiper">
+  <view class="top-swiper">
+    <view class="bg">
+      <view class="image">
+        <image src="{{list[currentIndex].src}}" mode="aspectFill"></image>
+      </view>
+    </view>
+    <view class="box">
+      <view style="height: 44px;"></view>
+      <swiper class="swiper" previous-margin="{{swiper.margin}}" next-margin='{{swiper.margin}}' circular="{{true}}"
+        bindchange="swiperChange">
+        <swiper-item wx:for="{{list}}" wx:key="index" bindtap="cardClick" data-type="{{item.type}}">
+          <image src='{{item.src}}' class="{{['le-img',(currentIndex==index)?'le-active':'']}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

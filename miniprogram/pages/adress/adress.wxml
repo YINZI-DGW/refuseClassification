@@ -1,0 +1,22 @@
+<view class="container">
+   <block wx:for="{{adresslists}}" wx:for-item="item" >
+      <view class="adress-item">
+      <view class="top">
+      <view class="biaoqian" wx:if="{{item.biaoqian=='家'}}" style="background-color: rgb(143, 129, 221);">家</view>
+      <view class="biaoqian" wx:elif="{{item.biaoqian=='公司'}}" style="background-color: rgb(30, 219, 141);">公司</view>
+      <view class="biaoqian" wx:elif="{{item.biaoqian=='学校'}}" style="background-color: rgb(199, 46, 179);">学校</view>
+      <span> {{item.adress}}</span>
+      </view>
+      <view class="middle">
+       <span>{{item.adress1}}</span>
+       <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/adress/编辑 (1).png" data-adress="{{item.adress}}" data-phone="{{item.phone}}" data-adress1="{{item.adress1}}" data-name="{{item.name}}" bindtap="change"></image>
+      </view>
+      <view class="bottom">
+      <span class="left">{{item.name}}</span>
+      <span class="right">{{item.phone}}</span>
+      </view>
+      </view>
+      <view class="fengexian"></view>
+   </block>
+   <button class="button" bindtap="goadd">＋ 新建收货地址</button>
+</view>

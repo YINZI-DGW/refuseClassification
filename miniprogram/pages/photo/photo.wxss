@@ -1,0 +1,13 @@
+/* pages/photo/photo.wxss */
+.takePhoto{
+    margin: 20rpx auto;
+ width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx; 
+  background-color: #00cc77;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

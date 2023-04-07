@@ -1,0 +1,109 @@
+<view class="container">
+    <view class="header">
+        <!-- 个人中心头部，block不渲染只是包裹头部内容 -->
+        <block>
+            <!-- 通过userInfo来判断用户是否登陆过从而展示不同的内容 -->
+            <view class="header_card" wx:if="{{userInfo.avatarUrl}}">
+                <view class="header_card_top">
+                    <view class="header_card_left">
+                        <image src="{{userInfo.avatarUrl}}"></image>
+                    </view>
+                    <view class="header_card_right">
+                        <text>{{userInfo.nickName}}</text>
+                        <span>基本信息</span>
+                    </view>
+                </view>
+                <van-divider custom-style='width:70%;padding:0;margin:0 auto' />
+                <view class="header_card_bottom">
+                    <view class="header_card_bottom_left">
+                        <!-- <image src="../../images/yue.png"></image> -->
+                        <text>我的排名：{{rank}}</text>
+                    </view>
+                    <view class="header_card_bottom_right">
+                        <!-- <image src="../../images/jifen.png"></image> -->
+                        <text>我的积分: {{userInfo.integral}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="header_card" wx:else>
+                <view class="header_card_top">
+                    <view class="header_card_left">
+                        <!-- 未登录老虎动态gif图 -->
+                        <image src="https://wimg.588ku.com/gif620/21/08/31/2c6d76bb5d393136c36ae8f0db530629.gif"></image>
+                    </view>
+                    <view class="header_card_right">
+                        <text>未登录</text>
+                        <view class="loginbutton" bindtap="handleGetUserInfo">登录</view>
+                        <!-- <button bindtap="handleGetUserInfo"  class="loginbutton">登录</button> -->
+                    </view>
+                </view>
+                <van-divider custom-style='width:70%;padding:0;margin:0 auto' />
+                <view class="header_card_bottom">
+                    <view class="header_card_bottom_left">
+                        <!-- <image src="../../images/yue.png"></image> -->
+                        <text>我的排名:</text>
+                    </view>
+                    <view class="header_card_bottom_right">
+                        <!-- <image src="../../images/jifen.png"></image> -->
+                        <text>我的积分:</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <!-- 个人中心中部三个按钮 -->
+        <image src="http://docfile.funkingka.cn/FqzmiFqvXbHg-cfbquNRlawHUgHt" class="bgcimg"></image>
+    </view>
+    <view class="body">
+        <view class="body_item">
+            <button open-type="contact" style="width: 100%; height: 100%;font-size: 16px;padding: 0;margin: 0;font-weight: 400;">
+                <image src="../../images/kefu.png"></image>
+                <text>联系客服</text>
+            </button>
+        </view>
+        <view class="body_item" bindtap="gotupu">
+            <image src="../../images/shequ.png"></image>
+            <text>下载图谱</text>
+        </view>
+        <view class="body_item" bindtap="GoIntegral">
+            <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/personal/签到.png"></image>
+            <text>每日签到</text>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="bottom_item" bindtap="invitation">
+            <image class="bottom_item_1" src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/personal/邀请好友.png"></image>
+            <image class="bottom_item_2" src="../../images/you2.png"></image>
+            <text>邀请好友</text>
+        </view>
+        <van-divider custom-style='width:100%;padding:0;margin:0 auto' />
+        <view class="bottom_item" bindtap="address">
+            <image class="bottom_item_1" src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/personal/收货地址管理.png"></image>
+            <image class="bottom_item_2" src="../../images/you2.png"></image>
+            <text>地址管理</text>
+        </view>
+        <van-divider custom-style='width:100%;padding:0;margin:0 auto;color: #1989fa;' />
+        <view class="bottom_item" bindtap="description">
+            <image class="bottom_item_1" src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/personal/关于我们.png"></image>
+            <image class="bottom_item_2" src="../../images/you2.png"></image>
+            <text>关于我们</text>
+        </view>
+        <van-divider custom-style='width:100%;padding:0;margin:0 auto;color: #1989fa;' />
+        <view class="bottom_item" bindtap="logout">
+            <image class="bottom_item_1" src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/personal/退出登录.png"></image>
+            <image class="bottom_item_2" src="../../images/you2.png"></image>
+            <text>退出登录</text>
+        </view>
+        <van-divider custom-style='width:100%;padding:0;margin:0 auto;color: #1989fa;' />
+        <view class="bottom_item" bindtap="goBackSystem">
+            <image class="bottom_item_1" src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/personal/后台系统.png"></image>
+            <image class="bottom_item_2" src="../../images/you2.png"></image>
+            <text>后台系统</text>
+        </view>
+    </view>
+    <van-notify id="van-notify" />
+    <!-- <van-cell title="显示分享面板" bind:click="onClick" /> -->
+    <van-toast id="custom-selector" />
+    <van-share-sheet show="{{ showShare }}" title="立即分享给好友" options="{{ options }}" bind:select="onSelect" bind:close="Closeshare" />
+    <!-- 签到弹出框 -->
+    <van-transition show="{{ showIntegral }}" name="" duration="{{ { enter: 300, leave: 1000 } }}" enter-class="van-enter-class" enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class" leave-to-class="van-leave-to-class" />
+</view>

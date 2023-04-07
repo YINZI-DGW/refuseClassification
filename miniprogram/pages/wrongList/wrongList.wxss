@@ -1,0 +1,56 @@
+@import "../../static/css/animation.wxss";
+@import "../../static/css/icon.wxss";
+@import "../../static/css/main.wxss";
+@import "../../static/css/my-icon.wxss";
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff !important;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid var(--indexL);
+}
+
+.title-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:  var(--indexL) !important;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  color: #000000;
+  font-weight: bold;
+  /* position: fixed; */
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.cu-list.menu-avatar>.cu-item view.content {
+  position: relative;
+  left: 0rpx;
+}
+
+.cu-list.menu-avatar>view.cu-item {
+  height: 120rpx;
+  padding-right: 0rpx;
+}
+
+.cu-list.menu-avatar>.cu-item view.content,
+.cu-list.menu-avatar>.cu-item view.answer,
+.cu-list.menu-avatar>.cu-item view.action {
+  flex: 1 1 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2em;
+}
+
+.cu-list>.cu-item view.move {
+  width: 160rpx;
+}
+
+.cu-list>view.cu-item.move-cur {
+  transform: translateX(-160rpx);
+}

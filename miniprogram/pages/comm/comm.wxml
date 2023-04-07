@@ -1,0 +1,23 @@
+<view class="cu-card article no-card">
+  <view class="cu-item shadow" wx:for="{{commList}}" bindtap="goInfo" data-id="{{item._id}}">
+    <view class="title">
+      <view class="text-cut">{{item.title}}</view>
+    </view>
+    <view class="content" style="flex-direction:{{item.imgList.length==1?'row':'column'}};">
+
+      <view class="image {{item.imgList.length==1?'':'list'}}">
+        <block wx:for="{{item.imgList}}" wx:for-item="url">
+          <image src="{{url}}" mode="aspectFill" wx:if="{{index<3}}"></image>
+        </block>
+      </view>
+      <view class="desc">
+        <view class="text-content">{{item.content}}</view>
+        <view class="footer">
+          <view class="cu-tag bg-green light sm round">{{item.tag}}</view>
+          <view class="time">{{item.date}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-load  {{!isLoad?'loading':'over'}}"></view>
+</view>

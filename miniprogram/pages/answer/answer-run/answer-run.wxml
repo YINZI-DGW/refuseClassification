@@ -1,0 +1,47 @@
+<view class="container999">
+  <view class="bg"></view>
+  <view class="tiem">
+    <text class="cuIcon-time margin-right-xs text-xl"></text>倒计时：<count-down id="countDownId"
+      bindstopTime="stopTimeHandle" minuteTnterval="{{40}}"></count-down>
+  </view>
+  <block wx:for="{{answerList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <block wx:if="{{nowIndex==index||nowIndex-1==index||nowIndex+1==index}}">
+      <view
+        class="{{['card',(nowIndex+1==index&&!isNext)?'aniSmall':'',(nowIndex==index&&isNext)?'aniBig':'',(nowIndex-1==index&&isNext)?'aniNext':'',(nowIndex==index&&!isNext)?'aniBack':'']}}">
+        <view class="cardTop">{{item.name+"什么垃圾?"}}</view>
+        <view class="cardBottom">
+          <radio-group class="block" bindchange="changeHander">
+            <view class="line">
+              <view class="lineTop">
+                <radio class="red" value="可回收物" checked="{{item.check=='可回收物'}}"></radio>
+                <view class="title">A、可回收物</view>
+              </view>
+            </view>
+            <view class="line">
+              <view class="lineTop">
+                <radio class="red" value="厨余垃圾" checked="{{item.check=='厨余垃圾'}}"></radio>
+                <view class="title">B、厨余垃圾</view>
+              </view>
+            </view>
+            <view class="line">
+              <view class="lineTop">
+                <radio class="red" value="有害垃圾" checked="{{item.check=='有害垃圾'}}"></radio>
+                <view class="title">C、有害垃圾</view>
+              </view>
+            </view>
+            <view class="line">
+              <view class="lineTop">
+                <radio class="red" value="其他垃圾" checked="{{item.check=='其他垃圾'}}"></radio>
+                <view class="title">D、其他垃圾</view>
+              </view>
+            </view>
+          </radio-group>
+        </view>
+        <view class="btn back" bindtap="mBack">上一题</view>
+        <view class="btn next" bindtap="mNext">下一题</view>
+      </view>
+    </block>
+  </block>
+</view>
+
+<view class="info-lable">答题可以获取积分</view>

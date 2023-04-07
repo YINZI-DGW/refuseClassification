@@ -1,0 +1,8 @@
+<van-grid gutter="{{ 10 }}" column-num="3" border="{{ true }}" square>
+    <block wx:for="{{iconList}}" wx:for-item="item">
+        <van-grid-item use-slot icon='{{item.icon}}' text='{{item.name}}' bindtap="go" data-id="{{item.badge}}">
+            <image style="width: 40%; height: 40%;" src="{{item.url}}" />
+            <text style="margin-top: 20rpx;font-size: 28rpx;font-weight: bold;">{{item.name}}</text>
+        </van-grid-item>
+    </block>
+</van-grid>

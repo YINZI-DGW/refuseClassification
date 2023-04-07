@@ -1,0 +1,34 @@
+<view class="body">
+  <view class="cu-list menu-avatar">
+    <view class="title-item cu-item">
+      <view class="content">
+        垃圾名称
+      </view>
+      <view class="answer">
+        正确答案
+      </view>
+      <view class="action">
+        错误答案
+      </view>
+    </view>
+
+    <view wx:for="{{list}}" wx:key="index" class="item cu-item {{modalName=='move-box-'+ index?'move-cur':''}}"
+      bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd"
+      data-target="move-box-{{index}}">
+
+      <view class="content">
+        {{item.name}}
+      </view>
+      <view class="answer">
+        {{item.type}}
+      </view>
+      <view class="action {{item.type!=item.check?'text-red':''}}">
+        {{item.check}}
+      </view>
+
+      <view class="move">
+        <view class="bg-red" catchtap="delWrong" data-index="{{index}}" data-wrong="{{item}}">删除</view>
+      </view>
+    </view>
+  </view>
+</view>

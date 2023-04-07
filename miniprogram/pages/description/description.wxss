@@ -1,0 +1,15 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    text-align: center;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 400rpx;
+    margin-left: 26vw;
+    text-align: center;
+    color: rgb(165, 165, 165);
+}

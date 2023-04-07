@@ -1,0 +1,20 @@
+<!-- <wxs src="../../util/comm.wxs" module="comm" /> -->
+<view class="fadeIn" wx:if="{{show}}">
+  <view class="weui-mask" bindtap="close"></view>
+  <view class="weui-dialog">
+    <view class="title">{{info.garbage_name}}{{comm(info.cate_name)}}</view>
+    <view class="body">
+      <view class="img">
+        <image wx:if="{{comm.textToImg(info.cate_name)}}" src="../../static/image/{{comm.textToImg(info.cate_name)}}" mode="widthFix"></image>
+      </view>
+      <view class="weui-dialog__bd text">
+        <text class="header">
+          ❀描述：
+        </text>{{info.ps}}
+      </view>
+    </view>
+    <view class="weui-dialog__ft">
+      <a class="weui-dialog__btn weui-dialog__btn_primary qd" bindtap="close">确定</a>
+    </view>
+  </view>
+</view>

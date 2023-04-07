@@ -1,0 +1,22 @@
+<block wx:for="{{user}}" wx:for-item="user">
+<van-swipe-cell style="margin: 10rpx;" id="swipe-cell" right-width="{{ 60 }}" left-width="{{ 60 }}" async-close bind:close="onClose" data-openid="{{user.OPENID}}">
+    <view slot="left">
+        <van-button type="primary" size="normal" style="width: 45rpx;">编辑</van-button>
+    </view>
+    <van-cell-group>
+        <van-cell>
+            <view slot="title" style="display: flex;">
+                <view class="van-cell-text" style="flex:1;overflow: hidden;height: 60rpx;">
+                <image class="img" src="{{user.avatarUrl}}"></image>
+                </view>
+                <view class="van-cell-text" style="flex:3;overflow: hidden;">昵称:{{user.nickName}}</view>
+                <view class="van-cell-text" style="flex:3;overflow: hidden;">积分:{{user.integral}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+    <view slot="right">
+        <van-button type="primary" size="normal" color="red" style="width: 45rpx;">删除</van-button>
+    </view>
+</van-swipe-cell>
+</block>
+<van-dialog id="van-dialog" />

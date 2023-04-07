@@ -1,0 +1,36 @@
+@import "../../static/css/animation.wxss";
+@import "../../static/css/icon.wxss";
+@import "../../static/css/main.wxss";
+@import "../../static/css/my-icon.wxss";
+
+page {
+  height: 100vh;
+  overflow: auto;
+}
+
+.cu-card.article>.cu-item {
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  padding-bottom: 20rpx;
+}
+
+.image.list {
+  display: flex;
+}
+
+.image image {
+  width: 240rpx;
+  height: 6.4em;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+}
+
+.time {
+  font-size: 22rpx;
+  color: #cccccc;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="swiper">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <van-notice-bar color="rgb(44, 44, 44)" background="rgb(183, 255, 204)" class="notice" left-icon="volume-o" text="垃圾分类 , 举手之劳 ; 变废为宝 , 美化家园。2022年继续努力" />
+
+  <view class="body">
+    <view class="item" bindtap="gophoto">
+      <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/home/图片识别.png"></image>
+      <span>拍照识别</span>
+    </view>
+    <view class="item" bindtap="govoice">
+      <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/home/语音识别模板.png"></image>
+      <span>语音识别</span>
+    </view>
+    <view class="item" bindtap="gosearch">
+      <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/home/19-键盘.png"></image>
+      <span>垃圾查询</span>
+    </view>
+    <!-- <view class="item" bindtap="gotest">
+      <image src="../../images/icon/text.png"></image>
+      <span>每日一测</span>
+    </view> -->
+    <view class="item" bindtap="gonew">
+      <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/home/新闻.png"></image>
+      <span>政策动态</span>
+    </view>
+    <!-- <view class="item" bindtap="goreclaim">
+      <image src="../../images/icon/huishou.png"></image>
+      <span>二次回收</span>
+    </view> -->
+    <view class="item" bindtap="gozhandian">
+      <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/home/站点信息.png"></image>
+      <span>站点查询</span>
+    </view>
+    <!-- <view class="item" bindtap="gotupu">
+      <image src="../../images/icon/tupu.png"></image>
+      <span>图谱下载</span>
+    </view> -->
+    <view class="item" bindtap="govideo">
+      <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/home/新闻，电视.png"></image>
+      <span>知识教学</span>
+    </view>
+  </view>
+  <view class="footer">
+       <view class="footeritem" bindtap="goreclaim" data-type="1">
+       <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/search/干垃圾.png"></image>
+       </view>
+       <view class="footeritem" bindtap="goreclaim" data-type="2">
+        <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/search/湿垃圾.png"></image>
+       </view>
+  </view>
+  <view class="footer">
+       <view class="footeritem" bindtap="goreclaim" data-type="3">
+        <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/search/有害垃圾.jpg"></image>
+       </view>
+       <view class="footeritem" bindtap="goreclaim" data-type="4">
+        <image src="cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/search/可回收物.png"></image>
+       </view>
+  </view>
+</view>

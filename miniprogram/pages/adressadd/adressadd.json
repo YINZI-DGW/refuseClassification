@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "van-picker": "@vant/weapp/picker/index",
+    "van-area": "@vant/weapp/area/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "navigationBarBackgroundColor": "#F6F6F6",
+  "navigationBarTitleText": "新增收货地址",
+  "navigationBarTextStyle": "black"
+}

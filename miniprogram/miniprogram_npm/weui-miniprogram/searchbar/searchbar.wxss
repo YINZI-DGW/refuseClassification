@@ -1,0 +1,36 @@
+.weui-search-bar__label text {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle
+}
+
+.weui-search-bar {
+  flex: 1;
+}
+
+view.weui-search-bar__form {
+  background-color: #f1f1f1;
+  border-radius: 40rpx !important;
+}
+
+.weui-search-bar__label {
+  background-color: #f1f1f1 !important;
+  border-radius: 50% !important;
+}
+
+.weui-search-bar {
+  border-radius: 50% !important;
+}
+
+.cancel-btn {
+  color: #888;
+  font-size: 40rpx;
+  padding-left: 10rpx;
+  flex-shrink: 0;
+}
+
+.search-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

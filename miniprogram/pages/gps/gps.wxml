@@ -1,0 +1,27 @@
+<view class="gbs">
+  <!--顶部基本信息-->
+  <view class="zan-panel" wx:if="{{size > 0}}">
+    <view class="zan-cell s-height">
+      <view class="zan-cell__bd">为你推荐附近的{{size}}个垃圾回收</view>
+    </view>
+  </view>
+
+  <cells>
+    <block wx:for="{{list}}" wx:if="{{list.length>0}}">
+      <cell link url="{{item.id}}" cotent="{{item.briefAddr}}" value="{{item.name}}" footer="相距{{item.distance}}米" bindnavigate="navigate_top">
+      </cell>
+    </block>
+  </cells>
+
+
+  <!--没有网络显示-->
+  <view class="container error" wx:if="{{!onLine}}">
+    <view class="zan-panel">
+      <view class="cuIcon-warn lg text-gray icon"></view>
+      <view class="zan-cell__bd error-info">在这个网络不可缺少的时代，居然没有连网，我也帮不了你了。</view>
+      <view class="zan-btns">
+        <button class="zan-btn" bindtap="doRefresh">要不！刷新试试</button>
+      </view>
+    </view>
+  </view>
+</view>

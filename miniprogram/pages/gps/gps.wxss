@@ -1,0 +1,48 @@
+.zan-panel {
+  margin-top: 0;
+}
+
+.zan-panel .s-height {
+  height: 60rpx;
+  background-color: rgba(66, 66, 66, 0.1);
+}
+
+
+.zan-panel .s-height .zan-cell__bd {
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.zan-panel .s-height .zan-btn--plain {
+  border: none;
+}
+
+/*没有连网*/
+
+.error {
+  background-color: #fff;
+  text-align: center;
+}
+
+.error-info {
+  margin-top: 50rpx;
+  text-align: center;
+  padding: 0 150rpx;
+  font-size: 30rpx;
+  margin-bottom: 50rpx;
+  line-height: 50rpx;
+}
+
+.error .zan-panel {
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+}
+
+.error .icon {
+  font-size: 128rpx;
+  padding-top: 100rpx;
+}

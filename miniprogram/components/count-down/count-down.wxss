@@ -1,0 +1,3 @@
+.count-time_cont {
+  display: flex;
+}

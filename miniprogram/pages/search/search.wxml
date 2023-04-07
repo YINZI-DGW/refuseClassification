@@ -1,0 +1,54 @@
+<view class="container">
+    <van-toast id="van-toast" />
+    <van-search style="width: 100%;" value="{{ search }}" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" bind:search='onSearch' />
+    <view class="history">
+        <view class="history-left">历史搜索</view>
+        <image class="history-right" src="../../images/history-del.png" bindtap="del"></image>
+    </view>
+    <view class="history-body">
+        <block wx:for="{{history}}" wx:key="index">
+            <view class="tag" bindtap="tagClick" data-tag="{{item}}">{{item}}</view>
+        </block>
+    </view>
+    <view class="hot-search">
+        <view class="hot-left">
+            热门搜索
+        </view>
+        <view class="hot-body">
+            <block wx:for="{{hot}}" wx:key="index">
+                <view class="tag" bindtap="tagClick" data-tag="{{item}}">{{item}}</view>
+            </block>
+        </view>
+    </view>
+    <!-- 弹窗 -->
+<van-dialog
+   use-slot
+  title="识别结果"
+  show="{{ show }}"
+  theme="round-button"
+  close-on-click-overlay
+  customStyle='height:76vh;'
+>
+ <view style="width:100%;">
+    <image src="{{imgsrc}}"  style="width: 200rpx;height: 200rpx;margin: 20px auto;display:block;"/>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+       <text style="color: rgb(22, 255, 197);font-weight: 700;">名称：</text>
+       <text>{{garbage_info[0].name}}</text>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+       <text style="color: rgb(22, 255, 197);font-weight: 700;">分类解释：</text>
+       <text>{{garbage_info[0].contain}}</text>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+    <text style="color: rgb(22, 255, 197);font-weight: 700;">包含类型：</text>
+       <text>{{garbage_info[0].explain}}</text>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+    <text style="color: rgb(22, 255, 197);font-weight: 700;">投放提示：</text>
+       <text>{{garbage_info[0].tip}}</text>
+ </view>
+</van-dialog>
+<van-dialog id="van-dialog" />
+
+</view>

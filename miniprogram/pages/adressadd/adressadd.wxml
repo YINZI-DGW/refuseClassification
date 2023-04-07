@@ -1,0 +1,26 @@
+<view class="container">
+    <van-popup show="{{ show }}" position="bottom" custom-style="width: 100vw;" bind:close="onClose">
+        <van-picker columns="{{ columns }}" show-toolbar bind:change="onChange" bind:cancel="onCancel" bind:confirm="onConfirm" />
+    </van-popup>
+    <van-cell-group inset>
+        <van-field value="{{ username }}" required clearable label="收货人" left-icon="manager-o" icon="question-o" placeholder="请输入收货人" bind:click-icon="onClickIcon"  bind:change="setusername"/>
+
+        <van-field value="{{ phone }}" label="手机号码" icon="question-o" placeholder="请输入收货人手机号" left-icon="phone-o" required border="{{ false }}" bind:change="setphone" />
+        <van-cell required title="所在地区" is-link bind:click="showPopup" icon="location-o" value="{{adress}}" />
+        <van-field value="{{ adress1 }}" label="详细地址" icon="logistics" placeholder="请输入详细地址" left-icon="free-postage" required border="{{ false }}" bind:change="setadress1" />
+    </van-cell-group>
+    <van-cell-group inset style="margin-top: 30rpx;width:96vw">
+        <van-cell title="标签">
+            <van-radio-group value="{{ radio }}" bind:change="onChange1" direction="horizontal">
+                <van-radio name="公司" style="margin-top: 20rpx;">公司</van-radio>
+                <van-radio name="学校" style="margin-top: 20rpx;">学校</van-radio>
+                <van-radio name="家" style="margin-top: 20rpx;">家</van-radio>
+            </van-radio-group>
+        </van-cell>
+        <van-cell title="设置为默认地址">
+            <van-switch checked="{{ checked }}" bind:change="onChange2" />
+        </van-cell>
+    </van-cell-group>
+    <button class="button" bindtap="save">保存</button>
+</view>
+<van-toast id="van-toast" />

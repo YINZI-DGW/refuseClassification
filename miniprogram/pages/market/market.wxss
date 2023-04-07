@@ -1,0 +1,63 @@
+/* pages/market/market.wxss */
+page{
+   background-color: rgb(219, 219, 219);
+}
+.card{
+    background-color: rgb(255, 255, 255);
+}
+.fengexian{
+    margin-top: 2rpx;
+    width: 100%;
+    border: 1px solid rgb(158, 158, 158);
+}
+.body{
+    width: 96%;
+    margin: auto;
+    margin-top: 20rpx;
+    border: 1px solid rgb(240, 240, 240);
+    height: 90vh;
+    border-radius: 20rpx 20rpx 0 0;
+    background-color: rgb(255, 255, 255);
+}
+.body-item{
+    display: flex;
+    height: 230rpx;
+    width: 100%;
+    border-bottom: 1px solid rgb(131, 131, 131);
+}
+.image{
+    display: block;
+    width: 160rpx;
+    height: 180rpx;
+    margin: auto;
+    margin-top: 25rpx;
+}
+.left{
+    /* background-color: rgb(82, 48, 48); */
+    width: 40%;
+}
+.right{
+    /* background-color: rgb(73, 7, 7); */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.text1{
+    font-size: 32rpx;
+    margin-top: 26rpx;
+    font-weight: 600;
+}
+.text2{
+    font-size: 26rpx;
+    color: rgb(153, 153, 153);
+}
+.text3{
+    color: red;
+    font-weight: 600;
+    font-size: 30rpx;
+    display: flex;
+}
+.text4{
+    font-size: 26rpx;
+    color: rgb(153, 153, 153);
+}

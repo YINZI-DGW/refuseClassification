@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText": "商品详情",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,10 @@
+<view class="title">
+  你的测试结果:{{fraction}}分
+</view>
+<view class="body">
+  <view class="item" wx:for="{{list}}">
+    <view>{{item.name}}</view>
+    <view>{{item.type}}</view>
+    <view class="{{item.type!=item.check?'red':''}}">{{item.check}}</view>
+  </view>
+</view>

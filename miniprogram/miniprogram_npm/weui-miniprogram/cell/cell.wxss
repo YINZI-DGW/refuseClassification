@@ -1,0 +1,12 @@
+.weui-cell_wxss.weui-cell_wxss:before {
+  display: block
+}
+
+
+view.weui-cell__bd {
+  font-size: 28rpx;
+}
+
+view.weui-cell__ft{
+  font-size: 24rpx;
+}

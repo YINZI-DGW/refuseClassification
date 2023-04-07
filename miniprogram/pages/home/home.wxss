@@ -1,0 +1,125 @@
+/* pages/home/home.wxss */
+page{
+  width: 100%;
+  height: 100%;
+ 
+  background-color: rgb(231, 231, 231);
+}
+.container{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x:hidden;
+}
+.swiper{
+  width: 100%;
+  height: 25vh;
+}
+.swiper-item{
+  height: 30vh;
+  width: 100%;
+}
+.swiper image{
+  height: 25vh;
+  width: 100%;
+}
+.notice{
+  width: 100%;
+  height: 5vh;
+  background-color: rgb(183, 255, 204);
+}
+.body{
+  background-color: #fff;
+  display: flex;
+  margin: 10rpx ;
+  padding: 10rpx 40rpx;
+  width: 100%;
+  /* height: 30vh; */
+  flex-wrap: wrap;
+}
+.item{
+  /* border: 2rpx solid rgb(161, 161, 161); */
+  border-radius: 5%;
+  /* background-color: rgb(78, 49, 49); */
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx 60rpx;
+  box-shadow: 10px 10px 5px rgb(105, 101, 101);
+}
+.item image{
+  display: block;
+  width: 55%;
+  height: 55%;
+  margin: auto auto;
+}
+.item span{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.huodong{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin-top: 10px;
+  /* box-sizing：border-box */
+}
+.huodong_header{
+  /* margin: 0 30px; */
+  width: 100%;
+  padding: 0 20px;
+  height: 5vh;
+  line-height: 5vh;
+  background-color: rgb(255, 255, 255);
+}
+.more{
+  margin-right: 40px;
+  display: inline;
+  float: right;
+  font-size: 12px;
+  color: aqua;
+}
+.huodong_body{
+   /* padding: 20px; */
+  /* border-radius: 10px ; */
+  border-top: 1rpx solid rgb(218, 208, 208);
+  border-bottom: 1rpx solid rgb(218, 208, 208);
+  width: 100%;
+  height: 380rpx;
+  background-color: rgb(253, 253, 253);
+  overflow: hidden;
+}
+.huodong_body image{
+  width: 90%;
+  height: 300rpx;
+  /* background-color: rgb(31, 26, 26); */
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.huodong_body text{
+  display: block;
+  width: 100%;
+  height: 40rpx;
+  /* background-color: rgb(97, 46, 46); */
+  line-height: 40rpx;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.footer{
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+}
+.footeritem{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx auto;
+  border-radius: 20rpx;
+}
+.footeritem image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}

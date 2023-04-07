@@ -1,0 +1,77 @@
+.top-swiper {
+  margin-bottom: 30rpx;
+}
+
+.top-swiper .bg {
+  padding-top: 25px;
+  box-sizing: content-box;
+  width: 100%;
+  position: relative;
+}
+
+
+.top-swiper .bg .image {
+  box-sizing: content-box;
+  z-index: 1;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.top-swiper .bg .image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 65%;
+  background-image: linear-gradient(to bottom, transparent, #FFF);
+}
+
+.top-swiper .bg .image>image {
+  position: absolute;
+  box-sizing: content-box;
+  padding: 60px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  top: -60px;
+  left: -60px;
+  filter: blur(50px);
+}
+
+.top-swiper .box {
+  padding-top: 25px;
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.top-swiper .swiper {
+  height: 600rpx;
+  margin: 0 20rpx;
+}
+
+.top-swiper .swiper .le-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out 0s;
+  border-radius: 4px;
+}
+
+.top-swiper .swiper .le-img.le-active {
+  transform: scale(1);
+}

@@ -1,0 +1,62 @@
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.history {
+    width: 100%;
+    margin-top: 20rpx;
+}
+
+.history-left {
+    float: left;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    padding-left: 40rpx;
+}
+
+.history-right {
+    display: block;
+    float: right;
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 10rpx;
+    margin-right: 40rpx;
+}
+
+.history-body {
+    margin-top: 30rpx;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 20rpx;
+    margin-right: 20rpx;
+    padding: 16rpx 26rpx;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    border-radius: 50rpx;
+    background: #ededed !important
+}
+
+.hot-search {
+    margin-top: 10rpx;
+    width: 100%;
+}
+.hot-left{
+    width: 100%;
+    padding-left: 40rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+}
+.hot-body{
+    padding-left: 40rpx;
+    margin-top: 30rpx;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}

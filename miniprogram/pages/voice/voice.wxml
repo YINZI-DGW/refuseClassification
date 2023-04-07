@@ -1,0 +1,40 @@
+      <!-- 语音 -->
+      <view class="main_voice text-center">
+        <view class="voice_ico shadow" bindtouchstart="touchStart" bindtouchend="touchEnd">
+          <text class="cuIcon-voicefill "></text>
+          <view class="pulse {{recordState == true ? 'p1' : ''}}"></view>
+          <view class="pulse {{recordState == true ? 'p2' : ''}}"></view>
+        </view>
+        <view class="tips">
+          <text wx:if="{{recordState == false}}">按住说话</text>
+          <text wx:else>{{tips}}</text>
+        </view>
+      </view>
+      <van-dialog
+   use-slot
+  title="识别结果"
+  show="{{ show }}"
+  theme="round-button"
+  close-on-click-overlay
+  customStyle='height:76vh;'
+>
+ <view style="width:100%;">
+    <image src="{{imgsrc}}"  style="width: 200rpx;height: 200rpx;margin: 20px auto;display:block;"/>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+       <text style="color: rgb(22, 255, 197);font-weight: 700;">名称：</text>
+       <text>{{garbage_info[0].name}}</text>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+       <text style="color: rgb(22, 255, 197);font-weight: 700;">分类解释：</text>
+       <text>{{garbage_info[0].contain}}</text>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+    <text style="color: rgb(22, 255, 197);font-weight: 700;">包含类型：</text>
+       <text>{{garbage_info[0].explain}}</text>
+ </view>
+ <view style="padding: 10rpx 40rpx;">
+    <text style="color: rgb(22, 255, 197);font-weight: 700;">投放提示：</text>
+       <text>{{garbage_info[0].tip}}</text>
+ </view>
+</van-dialog>

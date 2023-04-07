@@ -1,0 +1,26 @@
+.container {
+    /* height: 100vh; */
+    padding: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    /* flex-flow: column nowrap; */
+	align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+.video {
+    /* border-right: 1px solid rgb(56, 55, 52);
+    border-bottom: 1px solid rgb(44, 44, 43); */
+    float: left;
+    width: 48vw;
+    overflow: hidden;
+    margin: 20rpx 0rpx;
+}
+
+.video video {
+    margin: 20rpx 10rpx;
+    width: 46vw;
+    border-radius: 20px;
+    /* height: 200rpx; */
+}

@@ -1,0 +1,40 @@
+function textToImg(type) {
+  var img = ''
+  switch (type) {
+    case "厨餐垃圾":
+      img = 'cclj.png'
+      break;
+    case "厨余垃圾":
+      img = 'cylj.png'
+      break;
+    case "干垃圾":
+      img = 'glj.png'
+      break;
+    case "可回收物":
+      img = 'khsw.png'
+      break;
+    case "可回垃圾":
+      img = 'khsw.png'
+      break;
+    case "厨餐垃圾":
+      img = 'cclj.png'
+      break;
+    case "其他垃圾":
+      img = 'qtlj.png'
+      break;
+    case "湿垃圾":
+      img = 'slj.png'
+      break;
+    case "易腐垃圾":
+      img = 'yflj.png'
+      break;
+    case "有害垃圾":
+      img = 'yhlj.png'
+      break;
+  }
+  return img;
+}
+
+module.exports = {
+  textToImg: textToImg
+};

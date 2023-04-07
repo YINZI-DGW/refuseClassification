@@ -1,0 +1,58 @@
+.loading{
+  position: absolute;
+  top:40vh;
+  left:42vw
+}
+.body{
+  height: 90vh;
+  /* background-color: rgb(167, 164, 164); */
+  overflow-y: scroll;
+}
+.bodyitem{
+  margin: 10rpx 0;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+}
+.top-right{
+  display: flex;
+  flex-direction: column;
+}
+.touxiang{
+  width: 80rpx;
+  height: 80rpx;
+  /* border-radius: 50%; */
+}
+.touxiang image{
+  width: 100%;
+  height: 100%;
+}
+.add{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 30%;
+  background-color: rgb(35, 159, 231);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 6vh;
+  right: 6vw;
+}
+/* 遮罩 */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 86vw;
+  height: 60vh;
+  background-color: rgb(240, 240, 240);
+  border-radius: 30rpx;
+  padding-top: 40rpx;
+  z-index: 1000000;
+}

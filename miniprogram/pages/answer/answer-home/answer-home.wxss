@@ -1,0 +1,131 @@
+.answer-home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(3, 172, 59);
+}
+
+.answer-home .bg {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  background-color: var(--indexL);
+}
+
+.user-body {
+  margin-top: 100rpx;
+  position: relative;
+  width: 82vw;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 20rpx 30rpx 30rpx;
+  flex-direction: column;
+  box-shadow: 0 4rpx 16rpx #9B9B9B;
+}
+
+.user-portrait {
+  width: 200rpx;
+  height: 200rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0rpx 60rpx;
+  font-size: 30rpx;
+}
+
+.user-info .info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-item .key {
+  color: #999999;
+}
+
+
+.answer-menu {
+  margin-top: 46rpx;
+  display: flex;
+  width: 100vw;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.menu-item {
+  width: 44vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 5rpx 5rpx 14rpx #8de0be;
+  height: 230rpx;
+  margin-top: 40rpx;
+}
+
+.round {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.round-one {
+  box-shadow: 5rpx 5rpx 14rpx var(--indexL);
+  width: 260rpx;
+  height: 260rpx;
+  background-color: #ffffff;
+}
+
+.round-one {
+  box-shadow: 5rpx 5rpx 14rpx var(--indexL);
+  width: 260rpx;
+  height: 260rpx;
+  background-color: #ffffff;
+}
+
+.round-two{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #ffffff;
+}
+
+/* .menu-item:first-child{
+  width: 100%;
+} */
+
+.menu-item .item-img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-img text {
+  font-size: 60rpx;
+}
+
+.item-text {
+  font-size: 30rpx;
+  line-height: 40rpx;
+}

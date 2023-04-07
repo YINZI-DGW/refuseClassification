@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="tui-news-title">
+    {{comm.title}}
+  </view>
+  <view class="tui-sub-info">
+    <view class="tui-sub-left">
+      <text>{{comm.date}}</text>
+    </view>
+    <view class="tui-sub-right">阅读 {{comm.readNum}}</view>
+  </view>
+  <view class="tui-news-content">
+    <view class="tui-article">
+      {{comm.content}}
+    </view>
+    <block wx:for="{{comm.imgList}}">
+      <image src="{{item}}" class="img" mode="widthFix"></image>
+    </block>
+  </view>
+  <view class="tui-news-source">消息标签：{{comm.tag}}</view>
+</view>
+
+<view class="tui-operate-box">
+  <view class="cu-tag round tag" bindtap="btnFabulous">
+    <view class="cuIcon-appreciate  lg fabulous {{comm.isLike?'action':''}}"></view>
+    <text class="tui-black {{comm.isLike?'action':''}}">{{comm.likeNum}}赞</text>
+  </view>
+</view>
+
+<view class='share_btn'>
+  <image src='cloud://dd-aqou2.6464-dd-aqou2-1301484952/garbage/comm/guide_tag.png' mode="widthFix"></image>
+  <text>分享</text>
+</view>
+<button open-type='share' class='share_btyn'></button>

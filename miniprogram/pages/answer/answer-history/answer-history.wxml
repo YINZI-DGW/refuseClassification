@@ -1,0 +1,29 @@
+<view class="body">
+  <view class="cu-list menu-avatar">
+    <view class="title-item cu-item">
+      <view class="th">
+        分数
+      </view>
+      <view class="th">
+        用时
+      </view>
+      <view class="th">
+        日期
+      </view>
+    </view>
+
+    <view wx:for="{{list}}" wx:key="index" class="item cu-item">
+    
+      <view class="td text-blue">
+        {{item.historyIntegral}}分
+      </view>
+      <view class="td">
+        {{item.historyIntervalTime}}
+      </view>
+      <view class="td">
+        {{item.historyDate}}
+      </view>
+
+    </view>
+  </view>
+</view>

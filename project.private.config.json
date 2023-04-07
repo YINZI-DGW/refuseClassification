@@ -1,0 +1,60 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "首页",
+                    "pathName": "pages/home/home",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "个人中心",
+                    "pathName": "pages/personal/personal",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/Integral/Integral",
+                    "pathName": "pages/Integral/Integral",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/reclaim/reclaim",
+                    "pathName": "pages/reclaim/reclaim",
+                    "query": "type=1",
+                    "scene": null
+                },
+                {
+                    "name": "后台",
+                    "pathName": "pages/bSd/bsd",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "垃圾代扔",
+                    "pathName": "pages/help/help",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "地图",
+                    "pathName": "pages/map/map",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

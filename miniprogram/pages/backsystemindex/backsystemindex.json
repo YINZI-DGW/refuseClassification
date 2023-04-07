@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "后台主界面"
+}

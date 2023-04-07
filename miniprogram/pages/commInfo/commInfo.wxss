@@ -1,0 +1,153 @@
+page {
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  padding: 40rpx 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.tui-news-title {
+  font-size: 48rpx;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.tui-sub-info {
+  padding-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.tui-author {
+  color: #5677fc;
+  padding-right: 20rpx;
+}
+
+.tui-news-content {
+  padding-top: 40rpx;
+}
+
+.tui-article {
+  /* text-indent: 2em; */
+  font-size: 34rpx;
+  padding-bottom: 40rpx;
+  line-height: 60rpx;
+  text-align: justify;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.tui-article-pic {
+  width: 100%;
+  display: block;
+  margin-bottom: 40rpx;
+}
+
+.tui-news-source {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.tui-operate-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 50rpx;
+  box-sizing: border-box;
+}
+
+.tui-tag-class {
+  min-width: 130rpx;
+  padding: 20rpx 52rpx !important;
+  font-size: 26rpx !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-black {
+  color: #333;
+  padding-left: 12rpx;
+}
+
+.img {
+  width: 100%;
+}
+
+.tui-operate-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 50rpx;
+  box-sizing: border-box;
+}
+
+.tag {
+  width: 150rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fabulous {
+  font-size: 38rpx;
+}
+
+.action{
+  color: var(--indexL);
+}
+
+.share_btn {
+  position: fixed;
+  right: 20rpx;
+  bottom: 120rpx;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 2rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rpx 25rpx;
+  box-shadow: 1px 1px 3px #7c7272,
+    1px -1px 3px #dedede,
+    -1px 1px 3px #dedede,
+    -1px -1px 3px #dedede;
+  -moz-box-shadow: 1px 1px 3px #7c7272,
+    1px -1px 3px #dedede,
+    -1px 1px 3px #dedede,
+    -1px -1px 3px #dedede;
+  -webkit-box-shadow: 1px 1px 3px #7c7272,
+    1px -1px 3px #dedede,
+    -1px 1px 3px #dedede,
+    -1px -1px 3px #dedede;
+}
+
+.share_btn image {
+  width: 30rpx;
+  height: 30rpx !important;
+  margin-right: 10rpx;
+}
+
+.share_btyn {
+  position: fixed;
+  right: 20rpx;
+  bottom: 120rpx;
+  width: 150rpx;
+  height: 50rpx;
+  background: transparent;
+  border-radius: 30rpx;
+}
+
+.share_btyn::after {
+  border: none;
+}

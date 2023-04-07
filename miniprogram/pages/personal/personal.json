@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-transition": "@vant/weapp/transition/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "个人中心"
+}

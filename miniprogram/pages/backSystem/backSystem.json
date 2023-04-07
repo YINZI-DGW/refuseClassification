@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-loading": "@vant/weapp/loading/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "后台系统"
+}

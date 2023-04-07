@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-calendar": "@vant/weapp/calendar/index",
+    "calendar": "plugin://calendar/calendar"
+  },
+  "navigationBarTitleText": "每日打卡"
+}

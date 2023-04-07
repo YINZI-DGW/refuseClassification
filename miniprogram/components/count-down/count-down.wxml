@@ -1,0 +1,7 @@
+<view class="count-time_cont">
+  <block wx:if="{{hour!=='00'}}">
+    <view>{{hour}}</view>:
+  </block>
+  <view>{{minute}}</view>:
+  <view>{{secondsec}}</view>
+</view>

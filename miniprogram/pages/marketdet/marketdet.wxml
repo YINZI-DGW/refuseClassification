@@ -1,0 +1,45 @@
+<view class="container">
+    <image class="image" src="{{imgsrc}}"></image>
+    <view class="middle">
+        <view class="middle-left">
+            <view class="title">上新价</view>
+            <view class="title1">
+                <text>¥{{price}}</text>
+                <view class="title3">券后¥{{newprice}}</view>
+            </view>
+        </view>
+        <view class="middle-right">
+            <text style="font-size: 36rpx;margin-top: 10rpx;">新势力周</text>
+            <text style="font-size: 24rpx;">3月21日</text>
+            <text style="font-size: 24rpx;">20:00开卖</text>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="bottom-top" style="margin-top: 20rpx;">
+        <text style="width: 100rpx;margin-left: 20rpx;">礼金</text>
+        <text style="width: 160rpx;margin-left: 1rpx;">直降8折</text>
+        <text style="width: 240rpx; margin-left: 10rpx;">跨店每300减30</text>
+        </view>
+        <view style="font-size: 42rpx; color: red;padding-left: 40rpx;margin-top: 20rpx;">¥{{price}}</view>
+        <view class="bottom-middle">
+           <view class="bottom-middle-left">¥7.9折</view>
+           <view class="bottom-middle-middle">
+           <text>小黑盒新品 限时直降</text>
+           <text>新品首单限享1次，当日有效</text>
+           </view>
+           <view class="bottom-middle-right">下单立减</view>
+        </view>
+    </view>
+</view>
+<van-submit-bar price="{{ newprice*100 }}" button-text="立即购买" bind:submit="onClickButton" tip="{{ true }}">
+    <van-tag type="primary">
+        <van-icon name="chat-o" color="#1989fa"  size="50rpx" info="9"/>
+    </van-tag>
+    <van-tag type="primary" style="margin-left: 40rpx;">
+        <van-icon name="shopping-cart-o" color="#1989fa"  size="50rpx" info="2"/>
+    </van-tag>
+    <van-tag type="primary" style="margin-left: 40rpx;">
+        <van-icon name="star-o"  color="#1989fa"  size="50rpx" info="2"/>
+    </van-tag>
+    <view slot="tip">因疫情原因，暂不支持配送</view>
+</van-submit-bar>
